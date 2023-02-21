@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+/* 
+Isso indica as configurações da imagem, onde está com o URL, o repeat 
+  para não repetir a imagem quando ela acabar, o center para ela se posicionar no centro, o top
+  para ficar no topo da tela e o cover para ela expandir de acordo com o tamanho do dispositivo.
+
+    background-image: url(./assents/bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size:cover;
+    */
+
+/*
+Agora está tudo escrito novamente porém de uma maneira mais curta e facil, eles chamam de shorthand
+ O esqueleto é : 
+ background: color imagem repeat position/size
+    */
+    
+    background: url(./assents/bg-mobile.jpg) no-repeat top center/cover;
+}
+body *{
+    font-family: "inter", sans-serif;
+    color: white;
+}
+
+#container{
+    width: 360px;
+    margin: 56px auto 0px;
+}
+
+#profile {
+    text-align: center;
+    padding: 24px;
+}
+
+#profile img {
+    width: 112px;
+}
+
+#profile p {
+font-weight: 500;
+line-height: 24px;
+margin-top: 8px;
+/*font-size: 16px; não é nescessario porque o padrão do navegador é de 16px*/
+}
+/* Links-Lista*/
+ul{
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+ul li a{
+    display: flex;
+    justify-content: center;
+
+    padding: 16px 24px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+
+    backdrop-filter: blur(4px);
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: background 0.2s;
+}
+/*sudo- selector*/
+ul li a:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1.5px solid white;
+
+}
